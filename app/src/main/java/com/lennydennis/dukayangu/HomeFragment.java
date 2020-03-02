@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,6 +52,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String yourUserName = userName.getText().toString();
+
+                Toast.makeText(getActivity(), "Welcome "+yourUserName, Toast.LENGTH_LONG).show();
 
                 FragmentTransaction transaction=getFragmentManager().beginTransaction();
                 AccountFragment accountFragment = new AccountFragment();
