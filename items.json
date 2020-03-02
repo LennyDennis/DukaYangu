@@ -1,0 +1,61 @@
+[{
+        "title": "Laptop",
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80",
+        "price": "Ksh 200"
+    },
+{
+        "title": "Mobile Phone",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
+        "price": "Ksh 200"
+    },
+    {
+        "title": "Head Phones",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "price": "Ksh 200"
+    },
+    {
+        "title": "Ear phones",
+        "image": "https://images.unsplash.com/photo-1520186994231-6ea0019d8d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=468&q=80",
+        "price": "Ksh 200"
+    },
+    {
+        "title": "Mouse",
+        "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80",
+        "price": "Ksh 200"
+    },
+    {
+        "title": "Wireless keyboard",
+        "image": "https://images.unsplash.com/photo-1529236183275-4fdcf2bc987e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80",
+        "price": "Ksh 100"
+    },
+    {
+        "title": "Projector",
+        "image": "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "price": "Ksh 100"
+    },
+    {
+        "title": "Printer",
+        "image": "https://images.unsplash.com/photo-1571845995697-28be270350de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=690&q=80",
+        "price": "Ksh 100"
+    },
+    {
+        "title": "Samsung",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
+        "price": "Ksh 100"
+    },
+    {
+        "title": "Books",
+        "image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
+        "price": "Ksh 100"
+    },
+    {
+        "title": "Smart watch",
+        "image": "https://images.unsplash.com/photo-1542541864-4abf21a55761?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=348&q=80",
+        "price": "Ksh 90"
+    },
+    {
+        "title": "Iphone",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
+        "price": "Ksh 80"
+    }
+    ]
