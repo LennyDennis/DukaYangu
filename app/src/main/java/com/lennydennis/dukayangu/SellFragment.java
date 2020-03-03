@@ -1,49 +1,34 @@
 package com.lennydennis.dukayangu;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Rect;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.bumptech.glide.Glide;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONArray;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SellFragment extends Fragment {
 
-    private static final String TAG = SellFragment.class.getSimpleName();
-    private static final String URL = "items.json";
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
 
-    private RecyclerView recyclerView;
-    private List<Items> itemsList;
-    private StoreAdapter mAdapter;
+    private ArrayList<String> itemName = new ArrayList<>();
+    private  ArrayList<String> itemImage = new ArrayList<>();
+    private ArrayList<String> itemPrice = new ArrayList<>();
 
     public SellFragment() {
         // Required empty public constructor
     }
 
+    // TODO: Rename and change types and number of parameters
     public static SellFragment newInstance(String param1, String param2) {
         SellFragment fragment = new SellFragment();
         Bundle args = new Bundle();
@@ -59,143 +44,62 @@ public class SellFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        initItem();
+
         View view = inflater.inflate(R.layout.fragment_sell, container, false);
-
-        recyclerView = view.findViewById(R.id.recycler_view);
-        itemsList = new ArrayList<>();
-        mAdapter = new StoreAdapter(getActivity(), itemsList);
-
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(8), true));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
-        recyclerView.setNestedScrollingEnabled(false);
-
-        fetchItems();
-
+        ButterKnife.bind(this,view);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),itemName,itemImage,itemPrice);
+        recyclerView.setAdapter(recyclerViewAdapter  );
+        layoutManager = new GridLayoutManager(getContext(),2);
+        recyclerView.setLayoutManager(layoutManager);
+        // Inflate the layout for this fragment
         return view;
     }
 
-    private void fetchItems() {
-        JsonArrayRequest request = new JsonArrayRequest(URL,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        if (response == null) {
-                            Toast.makeText(getActivity(), "Please try again.", Toast.LENGTH_LONG).show();
-                            return;
-                        }
+    private void initItem(){
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-                        List<Items> items = new Gson().fromJson(response.toString(), new TypeToken<List<Items>>() {
-                        }.getType());
+        itemImage.add("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Laptop");
+        itemPrice.add("Ksh 500");
 
-                        itemsList.clear();
-                        itemsList.addAll(items);
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-                        // refreshing recycler view
-                        mAdapter.notifyDataSetChanged();
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // error in getting json
-                Log.e(TAG, "Error: " + error.getMessage());
-                Toast.makeText(getActivity(), "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        itemImage.add("https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Phone");
+        itemPrice.add("Ksh 300");
 
-        AppController.getInstance().addToRequestQueue(request);
-    }
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-        private int spanCount;
-        private int spacing;
-        private boolean includeEdge;
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-        public GridSpacingItemDecoration(int spanCount, int spacing, boolean includeEdge) {
-            this.spanCount = spanCount;
-            this.spacing = spacing;
-            this.includeEdge = includeEdge;
-        }
+        itemImage.add("https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Car");
+        itemPrice.add("Ksh 200");
 
-        @Override
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-            int position = parent.getChildAdapterPosition(view); // item position
-            int column = position % spanCount; // item column
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-            if (includeEdge) {
-                outRect.left = spacing - column * spacing / spanCount; // spacing - column * ((1f / spanCount) * spacing)
-                outRect.right = (column + 1) * spacing / spanCount; // (column + 1) * ((1f / spanCount) * spacing)
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
 
-                if (position < spanCount) { // top edge
-                    outRect.top = spacing;
-                }
-                outRect.bottom = spacing; // item bottom
-            } else {
-                outRect.left = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
-                outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
-                if (position >= spanCount) {
-                    outRect.top = spacing; // item top
-                }
-            }
-        }
-    }
-
-    /**
-     * Converting dp to pixel
-     */
-    private int dpToPx(int dp) {
-        Resources r = getResources();
-        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
-    }
-
-    class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder> {
-        private Context context;
-        private List<Items> itemsList;
-
-        public class MyViewHolder extends RecyclerView.ViewHolder {
-            public TextView name, price;
-            public ImageView thumbnail;
-
-            public MyViewHolder(View view) {
-                super(view);
-                name = view.findViewById(R.id.title);
-                price = view.findViewById(R.id.price);
-                thumbnail = view.findViewById(R.id.thumbnail);
-            }
-        }
-
-
-        public StoreAdapter(Context context, List<Items> itemsList) {
-            this.context = context;
-            this.itemsList = itemsList;
-        }
-
-        @Override
-        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.shop_item, parent, false);
-
-            return new MyViewHolder(itemView);
-        }
-
-        @Override
-        public void onBindViewHolder(MyViewHolder holder, final int position) {
-            final Items items = itemsList.get(position);
-            holder.name.setText(items.getTitle());
-            holder.price.setText(items.getPrice());
-
-            Glide.with(context)
-                    .load(items.getImage())
-                    .into(holder.thumbnail);
-        }
-
-        @Override
-        public int getItemCount() {
-            return itemsList.size();
-        }
+        itemImage.add("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Headphones");
+        itemPrice.add("Ksh 200");
     }
 }
