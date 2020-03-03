@@ -3,45 +3,35 @@ package com.lennydennis.dukayangu;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SellFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SellFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+
+    private ArrayList<String> itemName = new ArrayList<>();
+    private  ArrayList<String> itemImage = new ArrayList<>();
+    private ArrayList<String> itemPrice = new ArrayList<>();
 
     public SellFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SellFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static SellFragment newInstance(String param1, String param2) {
         SellFragment fragment = new SellFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +39,67 @@ public class SellFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        initItem();
+
+        View view = inflater.inflate(R.layout.fragment_sell, container, false);
+        ButterKnife.bind(this,view);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),itemName,itemImage,itemPrice);
+        recyclerView.setAdapter(recyclerViewAdapter  );
+        layoutManager = new GridLayoutManager(getContext(),2);
+        recyclerView.setLayoutManager(layoutManager);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sell, container, false);
+        return view;
+    }
+
+    private void initItem(){
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Laptop");
+        itemPrice.add("Ksh 500");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Phone");
+        itemPrice.add("Ksh 300");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Car");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Bike");
+        itemPrice.add("Ksh 200");
+
+        itemImage.add("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+        itemName.add("Headphones");
+        itemPrice.add("Ksh 200");
     }
 }
