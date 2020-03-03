@@ -1,13 +1,13 @@
 package com.lennydennis.dukayangu;
 
-public class Items {
+public class Items{
     private String title;
     private String price;
-    private String image;
+    private int image;
 
     public Items(){}
 
-    public Items(String title, String price, String image) {
+    public Items(String title, String price, int image) {
         this.title = title;
         this.price = price;
         this.image = image;
@@ -29,11 +29,11 @@ public class Items {
         this.price = price;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 }
