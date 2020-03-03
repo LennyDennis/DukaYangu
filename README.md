@@ -13,7 +13,7 @@ Glide
 
 
 # Codebeat Badge
-
+[![codebeat badge](https://codebeat.co/badges/e6c68ef0-5115-42af-902b-4a524a147fe1)](https://codebeat.co/projects/github-com-lennydennis-dukayangu-master)
 
 # Behaviour Driven Development
 Prompts the user to login by entering the username
