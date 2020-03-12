@@ -6,35 +6,28 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SellFragment extends Fragment {
-
+    private static final String TAG = "SellFragment";
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.errorTextView) TextView mErrorTextView;
     RecyclerView.LayoutManager layoutManager;
 
-    private ArrayList<String> itemName = new ArrayList<>();
-    private  ArrayList<String> itemImage = new ArrayList<>();
-    private ArrayList<String> itemPrice = new ArrayList<>();
-
-    public SellFragment() {
-        // Required empty public constructor
-    }
-
-    // TODO: Rename and change types and number of parameters
-    public static SellFragment newInstance(String param1, String param2) {
-        SellFragment fragment = new SellFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
+    List<Product> productList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,61 +38,51 @@ public class SellFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        initItem();
-
         View view = inflater.inflate(R.layout.fragment_sell, container, false);
         ButterKnife.bind(this,view);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),itemName,itemImage,itemPrice);
-        recyclerView.setAdapter(recyclerViewAdapter  );
-        layoutManager = new GridLayoutManager(getContext(),2);
-        recyclerView.setLayoutManager(layoutManager);
-        // Inflate the layout for this fragment
+
+        BestBuyApi client  = BestBuyRetrofitInstance.getProducts();
+
+        Call<BestBuyProductSearchResponse> call = client.getProducts();
+
+        call.enqueue(new Callback<BestBuyProductSearchResponse>() {
+            @Override
+            public void onResponse(Call<BestBuyProductSearchResponse> call, Response<BestBuyProductSearchResponse> response) {
+
+                if(response.isSuccessful()) {
+                    productList = response.body().getProducts();
+                    RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),productList);
+                    recyclerView.setAdapter(recyclerViewAdapter  );
+                    layoutManager = new GridLayoutManager(getContext(),2);
+                    recyclerView.setLayoutManager(layoutManager);
+                    showProducts();
+                }else{
+                    showUnsuccessfulMessage();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BestBuyProductSearchResponse> call, Throwable t) {
+                showFailureMessage();
+            }
+        });
+
         return view;
     }
 
-    private void initItem(){
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
+    private void showProducts() {
 
-        itemImage.add("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Laptop");
-        itemPrice.add("Ksh 500");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Phone");
-        itemPrice.add("Ksh 300");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Car");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Bike");
-        itemPrice.add("Ksh 200");
-
-        itemImage.add("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
-        itemName.add("Headphones");
-        itemPrice.add("Ksh 200");
+        recyclerView.setVisibility(View.VISIBLE);
     }
+
+    private void showFailureMessage() {
+        mErrorTextView.setText("Something went wrong. Please check your Internet connection and try again later");
+        mErrorTextView.setVisibility(View.VISIBLE);
+    }
+
+    private void showUnsuccessfulMessage() {
+        mErrorTextView.setText("Something went wrong. Please try again later");
+        mErrorTextView.setVisibility(View.VISIBLE);
+    }
+
 }

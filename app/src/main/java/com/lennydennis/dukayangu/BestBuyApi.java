@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 public interface BestBuyApi {
 
-    @GET("products?show=sku,name,type,salePrice,image&format=json")
+    @GET("products?apiKey=BxaYUpnn8AUTWp69vYwpDi1V&format=json")
     Call<BestBuyProductSearchResponse> getProducts();
 }

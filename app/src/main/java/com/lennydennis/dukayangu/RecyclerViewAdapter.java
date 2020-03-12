@@ -1,6 +1,5 @@
 package com.lennydennis.dukayangu;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,23 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private ArrayList<String> itemName = new ArrayList<>();
-    private  ArrayList<String> itemImage = new ArrayList<>();
-    private ArrayList<String> itemPrice = new ArrayList<>();
+    private List<Product> productList;
     private Context context;
 
-    public RecyclerViewAdapter( Context context,ArrayList<String> itemName, ArrayList<String> itemImage, ArrayList<String> itemPrice) {
-        this.itemName = itemName;
-        this.itemImage = itemImage;
-        this.itemPrice = itemPrice;
+    public RecyclerViewAdapter( Context context,List<Product> productList) {
+        this.productList = productList;
         this.context = context;
     }
 
@@ -46,16 +37,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide.with(context)
                 .asBitmap()
-                .load(this.itemImage.get(position))
+                .load(productList.get(position).getImage())
                 .into(holder.imageView);
-        holder.textName.setText(this.itemName.get(position));
-        holder.textPrice.setText(this.itemPrice.get(position));
+        holder.textName.setText(productList.get(position).getName());
+        String salesPrice = Double.toString(productList.get(position).getSalePrice());
+        holder.textPrice.setText(salesPrice);
     }
 
     @Override
     public int getItemCount()
     {
-        return this.itemName.size();
+        return productList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
