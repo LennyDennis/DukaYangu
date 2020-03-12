@@ -17,7 +17,7 @@ public class Product {
     private String type;
     @SerializedName("salePrice")
     @Expose
-    private Double salePrice;
+    private double salePrice;
     @SerializedName("image")
     @Expose
     private String image;
@@ -37,7 +37,7 @@ public class Product {
      * @param sku
      * @param type
      */
-    public Product(Integer sku, String name, String type, Double salePrice, String image) {
+    public Product(Integer sku, String name, String type, double salePrice, String image) {
         super();
         this.sku = sku;
         this.name = name;
@@ -70,11 +70,11 @@ public class Product {
         this.type = type;
     }
 
-    public Double getSalePrice() {
+    public double getSalePrice() {
         return salePrice;
     }
 
-    public void setSalePrice(Double salePrice) {
+    public void setSalePrice(double salePrice) {
         this.salePrice = salePrice;
     }
 
