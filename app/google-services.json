@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336540875142",
+    "firebase_url": "https://dukayangu-b895a.firebaseio.com",
+    "project_id": "dukayangu-b895a",
+    "storage_bucket": "dukayangu-b895a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336540875142:android:5e882c8e25175f0119d407",
+        "android_client_info": {
+          "package_name": "com.lennydennis.dukayangu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336540875142-229snl9b6kqv4sgr1g7263jlsupmktig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lennydennis.dukayangu",
+            "certificate_hash": "1b93f527b98ee66bc3c861071b24a130ede47094"
+          }
+        },
+        {
+          "client_id": "336540875142-1l6ff226ctsmc5smjmfrv0nsckqirp44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA57fka-lJ6MN9ujl2sn31Vf12f28e4Jw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336540875142-1l6ff226ctsmc5smjmfrv0nsckqirp44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
