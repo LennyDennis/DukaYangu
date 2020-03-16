@@ -68,7 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:id="@+id/sign_up_gender">
 
         <TextView
             android:layout_width="wrap_content"
@@ -97,11 +98,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:id="@+id/register_button"
+        android:id="@+id/sign_up_button"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:background="@drawable/sign_buttons"/>
 
     <LinearLayout
