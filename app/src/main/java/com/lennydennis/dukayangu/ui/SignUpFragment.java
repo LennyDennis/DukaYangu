@@ -15,6 +15,7 @@ import com.lennydennis.dukayangu.R;
  */
 public class SignUpFragment extends Fragment {
 
+
     public SignUpFragment() {
         // Required empty public constructor
     }
