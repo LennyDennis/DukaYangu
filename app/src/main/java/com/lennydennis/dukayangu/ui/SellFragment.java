@@ -1,4 +1,4 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.ui;
 
 import android.os.Bundle;
 
@@ -11,6 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.lennydennis.dukayangu.BestBuyApi;
+import com.lennydennis.dukayangu.BestBuyProductSearchResponse;
+import com.lennydennis.dukayangu.BestBuyRetrofitInstance;
+import com.lennydennis.dukayangu.Product;
+import com.lennydennis.dukayangu.R;
+import com.lennydennis.dukayangu.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

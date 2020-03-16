@@ -1,6 +1,5 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,7 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.lennydennis.dukayangu.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +30,8 @@ public class HomeFragment extends Fragment {
     EditText userName;
     @BindView(R.id.loginButton)
     Button loginButton;
+    @BindView(R.id.no_account_text)
+    TextView noAccountText;
 
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -63,6 +67,18 @@ public class HomeFragment extends Fragment {
                 accountFragment.setArguments(bundle);
 
                 transaction.replace(R.id.homeFragment, accountFragment);
+                transaction.commit();
+            }
+        });
+
+        noAccountText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                SignUpFragment signUpFragment = new SignUpFragment();
+
+                transaction.replace(R.id.homeFragment, signUpFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
