@@ -12,6 +12,8 @@ import com.lennydennis.dukayangu.ui.AccountFragment;
 import com.lennydennis.dukayangu.ui.CartFragment;
 import com.lennydennis.dukayangu.ui.HomeFragment;
 import com.lennydennis.dukayangu.ui.SellFragment;
+import com.lennydennis.dukayangu.ui.SignInFragment;
+import com.lennydennis.dukayangu.ui.SignUpFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         mBottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SignUpFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SignInFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
