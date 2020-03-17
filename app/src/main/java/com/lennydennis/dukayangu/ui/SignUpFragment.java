@@ -58,6 +58,9 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
         signInText.setOnClickListener(this);
         signUpButton.setOnClickListener(this);
 
+        if(mAuth.getCurrentUser() != null){
+            goToHomeFragment();
+        }
         // Inflate the layout for this fragment
         return view;
     }
@@ -100,10 +103,30 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(getContext(),"Registration successful",Toast.LENGTH_SHORT).show();
+                            goToLoginFragment();
                         }else{
                             Toast.makeText(getContext(),"Registration unsuccessful",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
+
+    public void goToLoginFragment(){
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        SignInFragment signInFragment = new SignInFragment();
+
+        transaction.replace(R.id.fragment_container, signInFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void goToHomeFragment(){
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        HomeFragment homeFragment = new HomeFragment();
+
+        transaction.replace(R.id.fragment_container, homeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 }
