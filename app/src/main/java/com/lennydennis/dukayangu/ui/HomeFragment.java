@@ -1,12 +1,13 @@
 package com.lennydennis.dukayangu.ui;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.lennydennis.dukayangu.R;
 
@@ -23,7 +24,10 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.NoActionBarTheme);
+
+        LayoutInflater layoutInflater = inflater.cloneInContext(contextThemeWrapper);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return layoutInflater.inflate(R.layout.fragment_home, container, false);
     }
 }
