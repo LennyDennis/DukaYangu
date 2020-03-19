@@ -1,79 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountFragment">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.AccountFragment">
 
-    <RelativeLayout
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
-        android:layout_height="405dp">
-        <LinearLayout
-            android:background="@color/baseColor"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_marginTop="35dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/ic_person_black_24dp"/>
-            <TextView
-                android:id="@+id/accountName"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="21sp"/>
-        </LinearLayout>
-    </RelativeLayout>
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:tint="@color/baseColor"
+        android:src="@drawable/ic_account_circle_black_24dp"/>
 
-    <LinearLayout
-        android:layout_width="360dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="45dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_person_black_24dp"/>
-            <TextView
-                android:id="@+id/accountName1"
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-               />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_email_black_24dp"/>
-            <TextView
-                android:id="@+id/accountEmail"
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-               />
-        </LinearLayout>
-    </LinearLayout>
+        android:text="Name"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="20dp"
+        android:textStyle="bold"
+        android:drawableTint="@color/baseColor"
+        android:textSize="20sp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="TestName"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textStyle="bold"
+        android:drawableTint="@color/baseColor"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="testEmail"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textStyle="bold"
+        android:drawableTint="@color/baseColor"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:drawablePadding="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/userPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginLeft="45dp"
+        android:text="testPhone"/>
+
+
+
+
+</LinearLayout>
