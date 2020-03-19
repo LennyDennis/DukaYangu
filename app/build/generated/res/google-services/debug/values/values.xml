@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">336540875142-1l6ff226ctsmc5smjmfrv0nsckqirp44.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://dukayangu-b895a.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">336540875142</string>
+    <string name="google_api_key" translatable="false">AIzaSyA57fka-lJ6MN9ujl2sn31Vf12f28e4Jw8</string>
+    <string name="google_app_id" translatable="false">1:336540875142:android:5e882c8e25175f0119d407</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA57fka-lJ6MN9ujl2sn31Vf12f28e4Jw8</string>
+    <string name="google_storage_bucket" translatable="false">dukayangu-b895a.appspot.com</string>
+    <string name="project_id" translatable="false">dukayangu-b895a</string>
+</resources>

@@ -1,0 +1,7 @@
+#Fri Mar 20 00:43:19 EAT 2020
+base.0=/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
