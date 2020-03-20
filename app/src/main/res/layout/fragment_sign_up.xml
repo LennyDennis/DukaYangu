@@ -43,6 +43,17 @@
         android:layout_margin="10dp"/>
 
     <EditText
+        android:id="@+id/sign_up_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/baseColor"
+        android:hint="Phone number"
+        android:inputType="phone" />
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -69,7 +80,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp"
-        android:id="@+id/sign_up_gender">
+        android:id="@+id/gender_radio_group">
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,13 +92,16 @@
             android:textStyle="bold"/>
 
         <RadioButton
+            android:id="@+id/gender_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:checked="true"
             android:text="Male"/>
 
         <RadioButton
+            android:id="@+id/gender_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"/>

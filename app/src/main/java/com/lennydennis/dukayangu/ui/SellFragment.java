@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,7 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SellFragment extends Fragment {
+public class SellFragment extends Fragment implements SearchView.OnQueryTextListener {
     private static final String TAG = "SellFragment";
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
@@ -82,6 +84,10 @@ public class SellFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.menu_search, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(this);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -100,4 +106,43 @@ public class SellFragment extends Fragment {
         mErrorTextView.setVisibility(View.VISIBLE);
     }
 
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        findProducts(newText);
+        return false;
+    }
+
+    private void findProducts(String newText) {
+        BestBuyApi client = BestBuyRetrofitInstance.getProducts();
+
+        Call<BestBuyProductSearchResponse> call = client.getProducts();
+
+        call.enqueue(new Callback<BestBuyProductSearchResponse>() {
+            @Override
+            public void onResponse(Call<BestBuyProductSearchResponse> call, Response<BestBuyProductSearchResponse> response) {
+
+                if (response.isSuccessful()) {
+                    productList = response.body().getProducts();
+                    RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), productList);
+                    recyclerView.setAdapter(recyclerViewAdapter);
+                    layoutManager = new GridLayoutManager(getContext(), 2);
+                    recyclerView.setLayoutManager(layoutManager);
+                    showProducts();
+                } else {
+                    showUnsuccessfulMessage();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BestBuyProductSearchResponse> call, Throwable t) {
+                showFailureMessage();
+            }
+        });
+
+    }
 }

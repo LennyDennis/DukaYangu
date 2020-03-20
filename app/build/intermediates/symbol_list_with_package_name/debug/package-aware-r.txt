@@ -1242,6 +1242,9 @@ id fixed
 id forever
 id forgot_password
 id fragment_container
+id gender_female
+id gender_male
+id gender_radio_group
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -1333,10 +1336,10 @@ id sign_in_password
 id sign_up_button
 id sign_up_cPassword
 id sign_up_email
-id sign_up_gender
 id sign_up_layout
 id sign_up_name
 id sign_up_password
+id sign_up_phone
 id smallLabel
 id snackbar_action
 id snackbar_text
