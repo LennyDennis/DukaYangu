@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
@@ -64,6 +65,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textPrice = itemView.findViewById(R.id.textPrice);
             parentLayout = itemView.findViewById(R.id.parentLayout);
         }
+    }
+
+    public void searchList(List<Product> newList) {
+        productList = new ArrayList<>();
+        productList.addAll(newList);
+        notifyDataSetChanged();
     }
 
 }

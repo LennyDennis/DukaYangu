@@ -25,9 +25,10 @@ public class SignUpFragment_ViewBinding implements Unbinder {
     target.signUpEmail = Utils.findRequiredViewAsType(source, R.id.sign_up_email, "field 'signUpEmail'", EditText.class);
     target.signUpPassword = Utils.findRequiredViewAsType(source, R.id.sign_up_password, "field 'signUpPassword'", EditText.class);
     target.confirmPassword = Utils.findRequiredViewAsType(source, R.id.sign_up_cPassword, "field 'confirmPassword'", EditText.class);
-    target.signUpGender = Utils.findRequiredViewAsType(source, R.id.sign_up_gender, "field 'signUpGender'", RadioGroup.class);
+    target.radioGroup = Utils.findRequiredViewAsType(source, R.id.gender_radio_group, "field 'radioGroup'", RadioGroup.class);
     target.signUpButton = Utils.findRequiredViewAsType(source, R.id.sign_up_button, "field 'signUpButton'", Button.class);
     target.signInText = Utils.findRequiredViewAsType(source, R.id.already_registered_text, "field 'signInText'", TextView.class);
+    target.signUpPhone = Utils.findRequiredViewAsType(source, R.id.sign_up_phone, "field 'signUpPhone'", EditText.class);
   }
 
   @Override
@@ -41,8 +42,9 @@ public class SignUpFragment_ViewBinding implements Unbinder {
     target.signUpEmail = null;
     target.signUpPassword = null;
     target.confirmPassword = null;
-    target.signUpGender = null;
+    target.radioGroup = null;
     target.signUpButton = null;
     target.signInText = null;
+    target.signUpPhone = null;
   }
 }

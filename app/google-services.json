@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "336540875142-nrukfv88haa8d82btn3ig876gs0eahqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lennydennis.dukayangu",
+            "certificate_hash": "90d849f3d70a5ace67a67b39962c4e3239bdb84b"
+          }
+        },
+        {
           "client_id": "336540875142-229snl9b6kqv4sgr1g7263jlsupmktig.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
