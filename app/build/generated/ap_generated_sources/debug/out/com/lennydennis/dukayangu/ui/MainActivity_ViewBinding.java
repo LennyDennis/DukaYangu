@@ -1,5 +1,5 @@
 // Generated code from Butter Knife. Do not modify!
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.ui;
 
 import android.view.View;
 import androidx.annotation.CallSuper;
@@ -7,6 +7,7 @@ import androidx.annotation.UiThread;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.lennydennis.dukayangu.R;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 

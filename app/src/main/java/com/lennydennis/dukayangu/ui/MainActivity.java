@@ -1,4 +1,4 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.lennydennis.dukayangu.R;
 import com.lennydennis.dukayangu.ui.AccountFragment;
 import com.lennydennis.dukayangu.ui.CartFragment;
 import com.lennydennis.dukayangu.ui.HomeFragment;

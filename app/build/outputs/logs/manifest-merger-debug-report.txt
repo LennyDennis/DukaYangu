@@ -164,10 +164,10 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/lenny/.gradle/ca
 		ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:13:9-40
-activity#com.lennydennis.dukayangu.MainActivity
+activity#com.lennydennis.dukayangu.ui.MainActivity
 ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:19-47
+		ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN

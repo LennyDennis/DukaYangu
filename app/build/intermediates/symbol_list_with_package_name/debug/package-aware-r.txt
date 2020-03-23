@@ -1275,6 +1275,9 @@ id media_actions
 id message
 id middle
 id mini
+id most_viewed_image
+id most_viewed_name
+id most_viewed_price
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1399,6 +1402,7 @@ id userEmail
 id userName
 id userPhone
 id view_offset_helper
+id view_pager
 id visible
 id wide
 id withText
@@ -1481,6 +1485,7 @@ layout fragment_home
 layout fragment_sell
 layout fragment_sign_in
 layout fragment_sign_up
+layout most_viewed_product
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

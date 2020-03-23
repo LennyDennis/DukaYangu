@@ -47,9 +47,9 @@
 28        android:testOnly="true"
 29        android:theme="@style/AppTheme" >
 29-->/home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:13:9-40
-30        <activity android:name="com.lennydennis.dukayangu.MainActivity" >
+30        <activity android:name="com.lennydennis.dukayangu.ui.MainActivity" >
 30-->/home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:9-20:20
-30-->/home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:19-47
+30-->/home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:14:19-50
 31            <intent-filter>
 31-->/home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:15:13-19:29
 32                <action android:name="android.intent.action.MAIN" />

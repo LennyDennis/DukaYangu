@@ -32,6 +32,10 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/menu/menu_main.xml"
     },
     {
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_most_viewed_product.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/most_viewed_product.xml"
+    },
+    {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
