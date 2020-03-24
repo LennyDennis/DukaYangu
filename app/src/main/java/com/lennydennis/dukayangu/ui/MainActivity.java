@@ -1,4 +1,4 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,11 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.lennydennis.dukayangu.ui.AccountFragment;
-import com.lennydennis.dukayangu.ui.CartFragment;
-import com.lennydennis.dukayangu.ui.HomeFragment;
-import com.lennydennis.dukayangu.ui.SellFragment;
-import com.lennydennis.dukayangu.ui.SignInFragment;
+import com.lennydennis.dukayangu.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.sell:
                             selectedFragment = new SellFragment();
                             break;
-                        case R.id.cart:
-                            selectedFragment = new CartFragment();
+                        case R.id.favorites:
+                            selectedFragment = new FavoritesFragment();
                             break;
                         case R.id.account:
                             selectedFragment = new AccountFragment();
                             break;
                     }
+                    assert selectedFragment != null;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
 
                     return true;
