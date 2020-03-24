@@ -21,28 +21,34 @@ public class Product {
     @SerializedName("image")
     @Expose
     private String image;
+    @SerializedName("customerReviewAverage")
+    @Expose
+    private double customerReviewAverage;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Product() {
     }
 
     /**
-     * 
+     *
      * @param image
      * @param salePrice
+     * @param customerReviewAverage
      * @param name
      * @param sku
      * @param type
      */
-    public Product(Integer sku, String name, String type, double salePrice, String image) {
+
+    public Product(Integer sku, String name, String type, double salePrice, double customerReviewAverage, String image) {
         super();
         this.sku = sku;
         this.name = name;
         this.type = type;
         this.salePrice = salePrice;
+        this.customerReviewAverage = customerReviewAverage;
         this.image = image;
     }
 
@@ -84,6 +90,14 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public double getCustomerReviewAverage() {
+        return customerReviewAverage;
+    }
+
+    public void setCustomerReviewAverage(double customerReviewAverage) {
+        this.customerReviewAverage = customerReviewAverage;
     }
 
 }

@@ -32,10 +32,6 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/menu/menu_main.xml"
     },
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_most_viewed_product.xml.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/most_viewed_product.xml"
-    },
-    {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
@@ -48,12 +44,16 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_star_black_24dp.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_star_black_24dp.xml"
     },
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -72,12 +72,16 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_search_black_24dp.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_search_black_24dp.xml"
+    },
+    {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_search_black_24dp.xml.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_search_black_24dp.xml"
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_favorite_items.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/favorite_items.xml"
     },
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_sign_up.xml.flat",
@@ -120,12 +124,12 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/menu/menu_search.xml"
     },
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_favorites.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_favorites.xml"
     },
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_cart.xml.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_cart.xml"
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/activity_main.xml"
     },
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_person_black_24dp.xml.flat",
