@@ -1087,6 +1087,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account_circle_black_24dp
 drawable ic_email_black_24dp
+drawable ic_favorite_border_24px
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1234,6 +1235,7 @@ id errorTextView
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id favorite_icon
 id favorite_image
 id favorite_name
 id favorite_price
@@ -1486,7 +1488,7 @@ layout favorite_items
 layout fragment_account
 layout fragment_favorites
 layout fragment_home
-layout fragment_sell
+layout fragment_products
 layout fragment_sign_in
 layout fragment_sign_up
 layout mtrl_layout_snackbar
@@ -1590,10 +1592,10 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string products
+string products_fragment
 string project_id
 string search_menu_title
-string sell
-string sell_fragment
 string sign_in_text
 string sign_up_text
 string status_bar_notification_info_overflow

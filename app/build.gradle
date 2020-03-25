@@ -24,6 +24,10 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'BESTBUY_API_KEY', BestBuyApiKey
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 }
 

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.sell:
-                            selectedFragment = new SellFragment();
+                            selectedFragment = new ProductsFragment();
                             break;
                         case R.id.favorites:
                             selectedFragment = new FavoritesFragment();

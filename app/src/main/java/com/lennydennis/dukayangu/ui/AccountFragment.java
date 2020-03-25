@@ -128,9 +128,9 @@ public class AccountFragment extends Fragment {
     private void logout() {
         FirebaseAuth.getInstance().signOut();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        HomeFragment homeFragment = new HomeFragment();
+        SignInFragment signInFragment = new SignInFragment();
 
-        fragmentTransaction.replace(R.id.fragment_container, homeFragment);
+        fragmentTransaction.replace(R.id.fragment_container, signInFragment);
         fragmentTransaction.commit();
     }
 }
