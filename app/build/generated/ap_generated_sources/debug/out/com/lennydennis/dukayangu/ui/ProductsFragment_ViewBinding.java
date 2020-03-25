@@ -12,11 +12,11 @@ import com.lennydennis.dukayangu.R;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 
-public class SellFragment_ViewBinding implements Unbinder {
-  private SellFragment target;
+public class ProductsFragment_ViewBinding implements Unbinder {
+  private ProductsFragment target;
 
   @UiThread
-  public SellFragment_ViewBinding(SellFragment target, View source) {
+  public ProductsFragment_ViewBinding(ProductsFragment target, View source) {
     this.target = target;
 
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recyclerView, "field 'recyclerView'", RecyclerView.class);
@@ -26,7 +26,7 @@ public class SellFragment_ViewBinding implements Unbinder {
   @Override
   @CallSuper
   public void unbind() {
-    SellFragment target = this.target;
+    ProductsFragment target = this.target;
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
