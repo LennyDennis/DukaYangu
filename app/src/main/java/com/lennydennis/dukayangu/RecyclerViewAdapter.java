@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .into(holder.imageView);
         holder.textName.setText(productList.get(position).getName());
         String salesPrice = Double.toString(productList.get(position).getSalePrice());
-        holder.textPrice.setText(salesPrice);
+        holder.textPrice.setText("Ksh " + salesPrice);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView imageView;
         TextView textName;
         TextView textPrice;
-        LinearLayout parentLayout;
+        RelativeLayout parentLayout;
 
         public    ViewHolder(@NonNull View itemView) {
             super(itemView);

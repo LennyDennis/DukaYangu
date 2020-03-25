@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_sell.xml.flat",
-        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_sell.xml"
-    },
-    {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_email_black_24dp.xml.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_email_black_24dp.xml"
     },
@@ -84,6 +80,10 @@
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/favorite_items.xml"
     },
     {
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_products.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_products.xml"
+    },
+    {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_fragment_sign_up.xml.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/layout/fragment_sign_up.xml"
     },
@@ -98,6 +98,10 @@
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_store_mall_directory_black_24dp.xml.flat",
         "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_store_mall_directory_black_24dp.xml"
+    },
+    {
+        "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/drawable_ic_favorite_border_24px.xml.flat",
+        "source": "/home/lenny/StudioProjects/DukaYangu/app/src/main/res/drawable/ic_favorite_border_24px.xml"
     },
     {
         "merged": "/home/lenny/StudioProjects/DukaYangu/app/build/intermediates/res/merged/debug/layout_shop_item.xml.flat",
