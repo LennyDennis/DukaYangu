@@ -7,19 +7,23 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.lennydennis.dukayangu.Constants;
 import com.lennydennis.dukayangu.R;
 import com.lennydennis.dukayangu.adapters.FavoritesViewholder;
+import com.lennydennis.dukayangu.adapters.FirebaseFavoritesListAdapter;
 import com.lennydennis.dukayangu.model.Product;
+import com.lennydennis.dukayangu.util.OnStartDragListener;
+import com.lennydennis.dukayangu.util.SimpleItemTouchHelperCallback;
 
 import java.util.List;
 
@@ -29,18 +33,15 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FavoritesFragment extends Fragment {
+public class FavoritesFragment extends Fragment implements OnStartDragListener {
 
     private static final String TAG = "CartFragment";
 
     @BindView(R.id.favoritesRecyclerView) RecyclerView favoritesRecyclerView;
 
     private DatabaseReference favoritesReference;
-    private FirebaseRecyclerOptions<Product> options;
-    private FirebaseRecyclerAdapter<Product, FavoritesViewholder> favoritesAdapter;
-    private FirebaseAuth firebaseAuth;
-    private FirebaseAuth.AuthStateListener authStateListener;
-    private String userId;
+    private FirebaseFavoritesListAdapter favoritesListAdapter;
+    private ItemTouchHelper itemTouchHelper;
 
     LinearLayoutManager layoutManager;
     List<Product> favoriteItems;
@@ -56,27 +57,30 @@ public class FavoritesFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_favorites, container, false);
         ButterKnife.bind(this,view);
-        firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        userId = firebaseUser.getUid();
 
-        favoritesReference = FirebaseDatabase.getInstance().getReference().child("Favorites").child(userId);
-        options = new FirebaseRecyclerOptions.Builder<Product>()
-                .setQuery(favoritesReference, Product.class).build();
+        setUpFirebaseAdapter();
 
-        favoritesAdapter = new FirebaseRecyclerAdapter<Product, FavoritesViewholder>(options) {
+        return view;
+    }
+
+    private void setUpFirebaseAdapter() {
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = firebaseUser.getUid();
+
+        Query query = FirebaseDatabase.getInstance()
+                .getReference().child(Constants.FIREBASE_CHILD_FAVORITE)
+                .child(userId)
+                .orderByChild(Constants.FIREBASE_QUERY_INDEX);
+
+        FirebaseRecyclerOptions<Product> options =
+                new FirebaseRecyclerOptions.Builder<Product>()
+                        .setQuery(query, Product.class).build();
+
+        favoritesListAdapter = new FirebaseFavoritesListAdapter(options, query, this, getContext()) {
             @Override
             protected void onBindViewHolder(@NonNull FavoritesViewholder favoritesViewholder, int i, @NonNull Product product) {
-
-                Glide.with(getContext())
-                        .asBitmap()
-                        .load(product.getImage())
-                        .into(favoritesViewholder.favoriteItemImage);
-                favoritesViewholder.favoriteItemName.setText(product.getName());
-                String salesPrice = Double.toString(product.getSalePrice());
-                favoritesViewholder.favoriteItemPrice.setText("KSH " + salesPrice);
-                String rating = Double.toString(product.getCustomerReviewAverage());
-                favoritesViewholder.favoriteItemRating.setText("Ratings: " + rating);
+                favoritesViewholder.bindProduct(product);
             }
 
             @NonNull
@@ -89,9 +93,36 @@ public class FavoritesFragment extends Fragment {
 
         layoutManager = new LinearLayoutManager(getContext());
         favoritesRecyclerView.setLayoutManager(layoutManager);
-        favoritesAdapter.startListening();
-        favoritesRecyclerView.setAdapter(favoritesAdapter);
-        return view;
+        favoritesListAdapter.startListening();
+        favoritesRecyclerView.setAdapter(favoritesListAdapter);
+        favoritesRecyclerView.setHasFixedSize(true);
+        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(favoritesListAdapter);
+        itemTouchHelper = new ItemTouchHelper(callback);
+        itemTouchHelper.attachToRecyclerView(favoritesRecyclerView);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        favoritesListAdapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (favoritesListAdapter != null) {
+            favoritesListAdapter.stopListening();
+        }
+    }
+
+    public void onStartDrag(RecyclerView.ViewHolder viewHolder) {
+        itemTouchHelper.startDrag(viewHolder);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        favoritesListAdapter.stopListening();
     }
 
 }

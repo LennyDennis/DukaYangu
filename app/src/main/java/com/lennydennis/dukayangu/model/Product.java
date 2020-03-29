@@ -25,6 +25,8 @@ public class Product {
     @Expose
     private double customerReviewAverage;
 
+    String index;
+
     /**
      * No args constructor for use in serialization
      *
@@ -37,6 +39,7 @@ public class Product {
         this.salePrice = salePrice;
         this.image = image;
         this.customerReviewAverage = customerReviewAverage;
+        this.index = "not_specified";
     }
 
     /**
@@ -58,6 +61,14 @@ public class Product {
         this.salePrice = salePrice;
         this.customerReviewAverage = customerReviewAverage;
         this.image = image;
+    }
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
     }
 
     public Integer getSku() {
