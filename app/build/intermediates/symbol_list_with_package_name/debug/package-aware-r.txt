@@ -1087,7 +1087,8 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account_circle_black_24dp
 drawable ic_email_black_24dp
-drawable ic_favorite_border_24px
+drawable ic_favorite_black_24dp
+drawable ic_favorite_border_black_24dp
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1235,7 +1236,6 @@ id errorTextView
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id favorite_icon
 id favorite_image
 id favorite_name
 id favorite_price
@@ -1333,6 +1333,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id select_favorite_item
 id selected
 id sell
 id shortcut

@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.lennydennis.dukayangu.R;
-import com.lennydennis.dukayangu.User;
+import com.lennydennis.dukayangu.model.User;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -68,13 +68,12 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance();
 
-
         signInText.setOnClickListener(this);
         signUpButton.setOnClickListener(this);
 
-        if(mAuth.getCurrentUser() != null){
-            goToHomeFragment();
-        }
+//        if(mAuth.getCurrentUser() != null){
+//            goToHomeFragment();
+//        }
         // Inflate the layout for this fragment
         return view;
     }
