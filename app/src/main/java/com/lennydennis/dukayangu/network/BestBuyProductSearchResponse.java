@@ -1,8 +1,9 @@
 
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.network;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.lennydennis.dukayangu.model.Product;
 
 import java.util.List;
 

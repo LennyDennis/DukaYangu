@@ -1,30 +1,30 @@
 package com.lennydennis.dukayangu.ui;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lennydennis.dukayangu.BestBuyApi;
-import com.lennydennis.dukayangu.BestBuyProductSearchResponse;
-import com.lennydennis.dukayangu.BestBuyRetrofitInstance;
-import com.lennydennis.dukayangu.FavoriteAdapter;
-import com.lennydennis.dukayangu.Product;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.lennydennis.dukayangu.R;
+import com.lennydennis.dukayangu.adapters.FavoritesViewholder;
+import com.lennydennis.dukayangu.model.Product;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,9 +32,17 @@ import retrofit2.Response;
 public class FavoritesFragment extends Fragment {
 
     private static final String TAG = "CartFragment";
-    @BindView(R.id.favoritesRecyclerView) RecyclerView favoritesRecyclerView;
-    LinearLayoutManager layoutManager;
 
+    @BindView(R.id.favoritesRecyclerView) RecyclerView favoritesRecyclerView;
+
+    private DatabaseReference favoritesReference;
+    private FirebaseRecyclerOptions<Product> options;
+    private FirebaseRecyclerAdapter<Product, FavoritesViewholder> favoritesAdapter;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+    private String userId;
+
+    LinearLayoutManager layoutManager;
     List<Product> favoriteItems;
 
     public FavoritesFragment() {
@@ -48,33 +56,42 @@ public class FavoritesFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_favorites, container, false);
         ButterKnife.bind(this,view);
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        userId = firebaseUser.getUid();
 
-        BestBuyApi client  = BestBuyRetrofitInstance.getProducts();
+        favoritesReference = FirebaseDatabase.getInstance().getReference().child("Favorites").child(userId);
+        options = new FirebaseRecyclerOptions.Builder<Product>()
+                .setQuery(favoritesReference, Product.class).build();
 
-        Call<BestBuyProductSearchResponse> call = client.getProducts();
-
-        call.enqueue(new Callback<BestBuyProductSearchResponse>() {
+        favoritesAdapter = new FirebaseRecyclerAdapter<Product, FavoritesViewholder>(options) {
             @Override
-            public void onResponse(Call<BestBuyProductSearchResponse> call, Response<BestBuyProductSearchResponse> response) {
+            protected void onBindViewHolder(@NonNull FavoritesViewholder favoritesViewholder, int i, @NonNull Product product) {
 
-                if(response.isSuccessful()) {
-                    favoriteItems = response.body().getProducts();
-                    FavoriteAdapter favoriteAdapter = new FavoriteAdapter(getContext(),favoriteItems);
-                    favoritesRecyclerView.setAdapter(favoriteAdapter);
-                    layoutManager = new LinearLayoutManager(getContext());
-                    favoritesRecyclerView.setLayoutManager(layoutManager);
-//                    showProducts();
-                }else{
-                    Log.d(TAG, "unsuccessful");
-                }
+                Glide.with(getContext())
+                        .asBitmap()
+                        .load(product.getImage())
+                        .into(favoritesViewholder.favoriteItemImage);
+                favoritesViewholder.favoriteItemName.setText(product.getName());
+                String salesPrice = Double.toString(product.getSalePrice());
+                favoritesViewholder.favoriteItemPrice.setText("KSH " + salesPrice);
+                String rating = Double.toString(product.getCustomerReviewAverage());
+                favoritesViewholder.favoriteItemRating.setText("Ratings: " + rating);
             }
 
+            @NonNull
             @Override
-            public void onFailure(Call<BestBuyProductSearchResponse> call, Throwable t) {
-                Log.d(TAG, "failed");
+            public FavoritesViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.favorite_items, parent, false);
+                return new FavoritesViewholder(view);
             }
-        });
-        // Inflate the layout for this fragment
+        };
+
+        layoutManager = new LinearLayoutManager(getContext());
+        favoritesRecyclerView.setLayoutManager(layoutManager);
+        favoritesAdapter.startListening();
+        favoritesRecyclerView.setAdapter(favoritesAdapter);
         return view;
     }
+
 }

@@ -1,5 +1,5 @@
 
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -32,6 +32,13 @@ public class Product {
     public Product() {
     }
 
+    public Product(String name, double salePrice, String image, double customerReviewAverage) {
+        this.name = name;
+        this.salePrice = salePrice;
+        this.image = image;
+        this.customerReviewAverage = customerReviewAverage;
+    }
+
     /**
      *
      * @param image
@@ -41,6 +48,7 @@ public class Product {
      * @param sku
      * @param type
      */
+
 
     public Product(Integer sku, String name, String type, double salePrice, double customerReviewAverage, String image) {
         super();

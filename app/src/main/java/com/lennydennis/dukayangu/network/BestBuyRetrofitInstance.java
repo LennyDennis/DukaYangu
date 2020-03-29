@@ -1,11 +1,7 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.network;
 
-import java.io.IOException;
+import com.lennydennis.dukayangu.Constants;
 
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

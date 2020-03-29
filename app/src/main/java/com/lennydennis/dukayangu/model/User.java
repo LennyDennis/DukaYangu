@@ -1,4 +1,4 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.model;
 
 public class User {
     private String userName;

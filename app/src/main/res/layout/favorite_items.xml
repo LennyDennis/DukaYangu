@@ -34,7 +34,7 @@
                 android:id="@+id/favorite_star"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:src="@drawable/ic_favorite_border_24px"
+                android:src="@drawable/ic_favorite_black_24dp"
                 android:scaleType="centerCrop"
                 android:tint="@color/baseColor"
                 android:padding="10dp"

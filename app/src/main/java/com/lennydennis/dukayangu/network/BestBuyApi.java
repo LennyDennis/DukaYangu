@@ -1,4 +1,4 @@
-package com.lennydennis.dukayangu;
+package com.lennydennis.dukayangu.network;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

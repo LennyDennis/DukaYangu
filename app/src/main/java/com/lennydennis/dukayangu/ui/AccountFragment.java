@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.lennydennis.dukayangu.R;
-import com.lennydennis.dukayangu.User;
+import com.lennydennis.dukayangu.model.User;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -16,12 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.lennydennis.dukayangu.BestBuyApi;
-import com.lennydennis.dukayangu.BestBuyProductSearchResponse;
-import com.lennydennis.dukayangu.BestBuyRetrofitInstance;
-import com.lennydennis.dukayangu.Product;
 import com.lennydennis.dukayangu.R;
-import com.lennydennis.dukayangu.RecyclerViewAdapter;
+import com.lennydennis.dukayangu.adapters.RecyclerViewAdapter;
+import com.lennydennis.dukayangu.model.Product;
+import com.lennydennis.dukayangu.network.BestBuyApi;
+import com.lennydennis.dukayangu.network.BestBuyProductSearchResponse;
+import com.lennydennis.dukayangu.network.BestBuyRetrofitInstance;
 
 import java.util.List;
 
@@ -63,7 +63,7 @@ public class ProductsFragment extends Fragment implements SearchView.OnQueryText
                 if(response.isSuccessful()) {
                     productList = response.body().getProducts();
                     RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),productList);
-                    recyclerView.setAdapter(recyclerViewAdapter  );
+                    recyclerView.setAdapter(recyclerViewAdapter);
                     layoutManager = new GridLayoutManager(getContext(),2);
                     recyclerView.setLayoutManager(layoutManager);
                     showProducts();
@@ -92,7 +92,6 @@ public class ProductsFragment extends Fragment implements SearchView.OnQueryText
     }
 
     private void showProducts() {
-
         recyclerView.setVisibility(View.VISIBLE);
     }
 
@@ -113,36 +112,8 @@ public class ProductsFragment extends Fragment implements SearchView.OnQueryText
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        findProducts(newText);
         return false;
     }
 
-    private void findProducts(String newText) {
-        BestBuyApi client = BestBuyRetrofitInstance.getProducts();
 
-        Call<BestBuyProductSearchResponse> call = client.getProducts();
-
-        call.enqueue(new Callback<BestBuyProductSearchResponse>() {
-            @Override
-            public void onResponse(Call<BestBuyProductSearchResponse> call, Response<BestBuyProductSearchResponse> response) {
-
-                if (response.isSuccessful()) {
-                    productList = response.body().getProducts();
-                    RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), productList);
-                    recyclerView.setAdapter(recyclerViewAdapter);
-                    layoutManager = new GridLayoutManager(getContext(), 2);
-                    recyclerView.setLayoutManager(layoutManager);
-                    showProducts();
-                } else {
-                    showUnsuccessfulMessage();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<BestBuyProductSearchResponse> call, Throwable t) {
-                showFailureMessage();
-            }
-        });
-
-    }
 }
