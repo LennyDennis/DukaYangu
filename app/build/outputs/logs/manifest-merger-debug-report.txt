@@ -4,15 +4,16 @@ ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:2:1-23:12
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:2:1-23:12
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:2:1-23:12
-MERGED from [com.google.android.material:material:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/073557272cdb0504ec443c1fdd6e13ca/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/299b341910a01778c1031d8bc586e870/material-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/deae1025afce5eec85ff8ccbcc9e7c1f/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/lenny/.gradle/caches/transforms-2/files-2.1/3fbc1fd346f80d1ea6db5e99ab41d4e4/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.firebaseui:firebase-ui-database:3.3.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/21541354af313594c9777791d0a01f23/jetified-firebase-ui-database-3.3.1/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/46702dfb46a9155127470b8e4570990c/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/38d2e665e4d6792a5794fc4982b6e6a6/jetified-firebase-auth-19.3.0/AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-database:19.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/29aa42da2f826000f5d1c394f05ac74a/jetified-firebase-database-19.2.1/AndroidManifest.xml:15:1-38:12
-MERGED from [com.jakewharton:butterknife:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc01] /home/lenny/.gradle/caches/transforms-2/files-2.1/6218c727e0eeb886236ffb40ebf01c04/recyclerview-selection-1.1.0-rc01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4212b4de23e474bf4daad6e4951aaee/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/14c9a7f7e0895a28c40b2aeb1236e906/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4fafc86370755d7c904d03ef3971083/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/670f625b815a4900eedfd1b9e0cdde04/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
@@ -37,18 +38,18 @@ MERGED from [androidx.fragment:fragment:1.1.0] /home/lenny/.gradle/caches/transf
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/eea3c3379f1143f4ea143ac500464bfe/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/34e8eba7d42c4b30a741a2f064be41e3/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/06b812f6d774b24152207909eeade351/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b422219dec3a7e32cfbb73e3fb88e165/transition-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/192eda949ad795e15bd17fc9b0e814a6/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/67683a0eeac071989693f58740fd22e9/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/744e20a78dacd4e10a3ccb1c5582fd4a/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife-runtime:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/ad6b189e3338a11c22806e6a58eb2fcd/jetified-butterknife-runtime-10.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/fc3b84bebf168ec4624a3589b1079cd0/jetified-butterknife-runtime-10.2.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/17f9bddc9992d9e356f424e919c9a01c/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/458d8696fed65034db6dcee48409b4a0/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/2b4bff7edcef561489f1a4d02758ff58/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/88885b8afb892f2c4c92950308f02240/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/c3c67a6b0c567715c1b761e2bc561a80/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/1c4c8673f0e741e0bcbd9526ca6b8b67/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4f6df70d59f282df2678e78fe44b186/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b5b4183164e6df6068232ba173eb5eb8/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/64cddd45e89bc3894cf7e46e3178d8e4/core-1.1.0/AndroidManifest.xml:17:1-26:12
@@ -59,9 +60,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/lenny
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d6b398578fb6a91ae4dbe521358602cb/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/51fbd676cad088c8a4d58d2bba77ef58/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui-common:3.3.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/476804a54d67193d0ba1aae7aed6e3bd/jetified-firebase-ui-common-3.3.1/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/812334fc979131257e9cd9e9abfdbe50/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/7198d9a0add136c8c7f5999756bca948/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/11f25004d330e2f547128b83f4573f71/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/f7483b19bb1e83b1018e6bf27f210e99/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/5e17b2c11736659b6b2e8c71ecf06d4b/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -106,8 +107,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.3] /h
 		ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml:7:5-21:19
-MERGED from [com.google.android.material:material:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/073557272cdb0504ec443c1fdd6e13ca/material-1.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/073557272cdb0504ec443c1fdd6e13ca/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/299b341910a01778c1031d8bc586e870/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/299b341910a01778c1031d8bc586e870/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/lenny/.gradle/caches/transforms-2/files-2.1/3fbc1fd346f80d1ea6db5e99ab41d4e4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/lenny/.gradle/caches/transforms-2/files-2.1/3fbc1fd346f80d1ea6db5e99ab41d4e4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/38d2e665e4d6792a5794fc4982b6e6a6/jetified-firebase-auth-19.3.0/AndroidManifest.xml:23:5-40:19
@@ -186,8 +187,8 @@ uses-sdk
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml
 INJECTED from /home/lenny/StudioProjects/DukaYangu/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/073557272cdb0504ec443c1fdd6e13ca/material-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/073557272cdb0504ec443c1fdd6e13ca/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/299b341910a01778c1031d8bc586e870/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/299b341910a01778c1031d8bc586e870/material-1.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/deae1025afce5eec85ff8ccbcc9e7c1f/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/deae1025afce5eec85ff8ccbcc9e7c1f/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/lenny/.gradle/caches/transforms-2/files-2.1/3fbc1fd346f80d1ea6db5e99ab41d4e4/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
@@ -200,10 +201,12 @@ MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/lenny/.gradle/cache
 MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/38d2e665e4d6792a5794fc4982b6e6a6/jetified-firebase-auth-19.3.0/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-database:19.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/29aa42da2f826000f5d1c394f05ac74a/jetified-firebase-database-19.2.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:19.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/29aa42da2f826000f5d1c394f05ac74a/jetified-firebase-database-19.2.1/AndroidManifest.xml:19:5-21:41
-MERGED from [com.jakewharton:butterknife:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/c25e3c0c7477a57af2145f64c37e15a8/jetified-butterknife-10.2.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc01] /home/lenny/.gradle/caches/transforms-2/files-2.1/6218c727e0eeb886236ffb40ebf01c04/recyclerview-selection-1.1.0-rc01/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0-rc01] /home/lenny/.gradle/caches/transforms-2/files-2.1/6218c727e0eeb886236ffb40ebf01c04/recyclerview-selection-1.1.0-rc01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4212b4de23e474bf4daad6e4951aaee/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4212b4de23e474bf4daad6e4951aaee/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/14c9a7f7e0895a28c40b2aeb1236e906/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/14c9a7f7e0895a28c40b2aeb1236e906/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4fafc86370755d7c904d03ef3971083/cardview-1.0.0/AndroidManifest.xml:20:5-44
@@ -252,18 +255,22 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/lenny/.gradle/c
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/34e8eba7d42c4b30a741a2f064be41e3/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/06b812f6d774b24152207909eeade351/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/06b812f6d774b24152207909eeade351/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b422219dec3a7e32cfbb73e3fb88e165/transition-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b422219dec3a7e32cfbb73e3fb88e165/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/192eda949ad795e15bd17fc9b0e814a6/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/192eda949ad795e15bd17fc9b0e814a6/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/67683a0eeac071989693f58740fd22e9/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/67683a0eeac071989693f58740fd22e9/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/744e20a78dacd4e10a3ccb1c5582fd4a/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/744e20a78dacd4e10a3ccb1c5582fd4a/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/ad6b189e3338a11c22806e6a58eb2fcd/jetified-butterknife-runtime-10.2.0/AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/ad6b189e3338a11c22806e6a58eb2fcd/jetified-butterknife-runtime-10.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b9f680570392d2941077c96ac0071037/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/fc3b84bebf168ec4624a3589b1079cd0/jetified-butterknife-runtime-10.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/fc3b84bebf168ec4624a3589b1079cd0/jetified-butterknife-runtime-10.2.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/17f9bddc9992d9e356f424e919c9a01c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/17f9bddc9992d9e356f424e919c9a01c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/458d8696fed65034db6dcee48409b4a0/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/458d8696fed65034db6dcee48409b4a0/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/2b4bff7edcef561489f1a4d02758ff58/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/2b4bff7edcef561489f1a4d02758ff58/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/88885b8afb892f2c4c92950308f02240/customview-1.0.0/AndroidManifest.xml:20:5-44
@@ -272,10 +279,6 @@ MERGED from [androidx.loader:loader:1.0.0] /home/lenny/.gradle/caches/transforms
 MERGED from [androidx.loader:loader:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/c3c67a6b0c567715c1b761e2bc561a80/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/1c4c8673f0e741e0bcbd9526ca6b8b67/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/1c4c8673f0e741e0bcbd9526ca6b8b67/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/bf1332ee565e502eb50b0443b6d962bf/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/4c101d10aee151684f1d60fff95912c7/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4f6df70d59f282df2678e78fe44b186/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/a4f6df70d59f282df2678e78fe44b186/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/b5b4183164e6df6068232ba173eb5eb8/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
@@ -296,12 +299,12 @@ MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/lenny/.gradle/cac
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/51fbd676cad088c8a4d58d2bba77ef58/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.firebaseui:firebase-ui-common:3.3.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/476804a54d67193d0ba1aae7aed6e3bd/jetified-firebase-ui-common-3.3.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.firebaseui:firebase-ui-common:3.3.1] /home/lenny/.gradle/caches/transforms-2/files-2.1/476804a54d67193d0ba1aae7aed6e3bd/jetified-firebase-ui-common-3.3.1/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/812334fc979131257e9cd9e9abfdbe50/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/812334fc979131257e9cd9e9abfdbe50/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/7198d9a0add136c8c7f5999756bca948/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/7198d9a0add136c8c7f5999756bca948/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/d1e480b7a3e38bc5bb2c563b2e91c373/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/11f25004d330e2f547128b83f4573f71/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/11f25004d330e2f547128b83f4573f71/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/lenny/.gradle/caches/transforms-2/files-2.1/f7483b19bb1e83b1018e6bf27f210e99/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
